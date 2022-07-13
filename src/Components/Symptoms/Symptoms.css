@@ -1,0 +1,35 @@
+.childContainer3{
+    display: grid;
+    height: 850px;
+    margin-top: 20px;
+    grid-template-columns: 60% 40%;
+    /* border: 1px solid green; */
+  }
+  .leftInfo{
+    margin-top: 170px;
+    /* border: 1px solid rgb(16, 255, 255); */
+  }
+  .leftInfo button{
+    width: 197px;
+    height: 39px;
+    border-radius: 30px;
+    background-color: rgba(232, 20, 84, 0.06);
+    color: #E81454;
+    border: none;
+  }
+  .leftInfo h1{
+    font-size: 36px;
+    margin-top: 25px;
+  }
+  .leftInfo p{
+    line-height: 209.6%;
+    margin-top: 35px;
+  }
+  
+  .rightImage{
+    /* background-image: url(./doctor-woman\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center; */
+    /* border: 1px solid green; */
+  }
+  

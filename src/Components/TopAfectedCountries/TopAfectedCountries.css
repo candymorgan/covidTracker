@@ -1,0 +1,87 @@
+.childContainer2{
+    height: 500px;
+    margin-top: 60px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    /* display: flex; */
+    border: 2px solid greenyellow;
+  }
+  .childContainer2_Circle{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /* position: absolute; */
+    background-color: rgba(214, 50, 50, 0.04);
+    top: 440px;
+    /* border: 2px solid gold; */
+  }
+  
+  .writeUp{
+    height: 28px;
+    width: 320px;
+    /* border: 2px solid red; */
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: 24px;
+  }
+  
+  .childContainer2_Ptag{
+    height: 20px;
+    width: 210px;
+    margin-top: 10px;
+    /* border: 1px solid orange; */
+    margin-left: 35px;
+    
+  }
+  .countriesContainer{
+    position: absolute;
+    top: 576px;
+    left: 200px;
+    border: 1px solid #12790e
+  
+  }
+  
+  .generalCaseContainer{
+    width: 70%;
+    height: 400px;
+    /* margin-top: 90px; */
+    /* position: absolute; */
+    /* border: 1px solid blue; */
+    /* display: flex; */
+  }
+  .countriesContainer h3{
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  
+  .cases-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid red;
+  }
+  
+  .country{
+    padding:10px 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid indigo;
+  }
+  
+  .nameLogo_div, .nameLogo_div2, .nameLogo_div3, .nameLogo_div4{
+    height: auto;
+    /* width: 130px; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* border: 2px solid #2B6FF3; */
+  }
+  
+  .countryLogo1, .countryLogo2, .countryLogo3, .countryLogo4{
+    height: 36px;
+    width: 36px;
+    /* margin-top: 10px; */
+    border: 1px solid fuchsia;
+  }

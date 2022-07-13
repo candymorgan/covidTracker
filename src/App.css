@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+/* my covid19 react project */
+
+body{
+  background-color: #ecf0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.littleCircle{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 3px solid #2B6FF3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.covidTracker{
+  height: 30px;
+  width: 210px;
+  /* border: 1px solid pink; */
+  position: absolute;
+  top: 137px;
+  left: 89px;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container2{
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 90px;
+  border-radius: 5px;
+  /* position: absolute; */
+  /* top: 256px; */
+  /* border: 1px solid orange; */
+}
+
+.childContainer1{
+  height: 200px;
+  width: 100%;
+  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  padding: 15px;
+  border-radius: 5px;
+  /* border: 1px solid orchid; */
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+/* .countryName1, .countryName2, .countryName3, .countryName4{
+  width: 29PX;
+  height: 17px;
+  margin-top: 20px;
+} */
+.country:hover{
+  background: rgba(238, 238, 238, 0.34);
+
+}
+.figures1{
+  color: #2B6FF3;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.caseData{
+  height: 307px;
+  width: 380px;
+  border: 1px solid red;
 }
+
+
+
+
+
+

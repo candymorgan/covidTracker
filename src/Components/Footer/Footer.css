@@ -1,0 +1,66 @@
+.childContainer5{
+    height: 450px;
+    margin-top: 250px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid blue; */
+  }
+  
+  .subContainer{
+    width: 700px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid violet; */
+  }
+  
+  .aboutContainer{
+    height: 200px;
+    width: 100px;
+    margin-top: 50px;
+    /* border: 1px solid greenyellow; */
+  }
+  
+  .aboutDetails{
+    height: 150px;
+    width: 90px;
+    margin-top: 50px;
+    /* border: 1px solid; */
+  }
+  
+  .contactContainer{
+    height: 200px;
+    width: 300px;
+    margin-top: 50px;
+    /* border: 1px solid hotpink; */
+  }
+  
+  .contactDetails{
+    height: 150px;
+    width: 250px;
+    margin-top: 50px;
+    /* border: 1px solid greenyellow; */
+  }
+  .childContainer5 h3{
+    margin-bottom: 10px;
+  }
+  
+  .email{
+    height: 100px;
+    width: 500px;
+    margin-top: 50px;
+    /* border: 1px solid lawngreen */
+  }
+  .email h3{
+    margin-top: 10px;
+  }
+  .email input{
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+    /* border-bottom: 1px solid; */
+  }

@@ -1,0 +1,67 @@
+.globalstats{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 143px;
+    width: 275px;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    
+    margin-top: 15px;
+  }
+  .globalstats.total {
+    background-color: rgba(43, 11, 243, 0.05);
+  }
+  .globalstats.active {
+    background-color: rgba(243, 153, 17, 0.05);
+  }
+  .globalstats.recovered {
+    background-color: rgba(22, 180, 66, 0.05);
+  }
+  .globalstats.deaths {
+    background-color: rgba(214, 50, 50, 0.05);
+  }
+  .circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    height: 200px;
+    width: 200px;
+    /* border: 1px solid blue; */
+    border-radius: 50%;
+    
+  }
+  .circle.total {
+    background-color: rgba(43, 11, 243, 0.05);
+  }
+  .circle.active {
+    background-color: rgba(243, 153, 17, 0.05);
+  }
+  .circle.recovered {
+    background-color: rgba(22, 180, 66, 0.05);
+  }
+  .circle.deaths {
+    background-color: rgba(170, 42, 42, 0.05);
+  }
+  .circle-child > span {
+      display: block;
+      text-align: center;
+  }
+  .circle-child > .case-count {
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 43px;
+  }
+  .case-count.active {
+      color: #F39911;
+  }
+  .case-count.total {
+      color: #2B6FF3;
+  }
+  .case-count.recovered {
+      color: #16B442;
+  }
+  .case-count.deaths {
+      color: #AA2A2A;
+  }
