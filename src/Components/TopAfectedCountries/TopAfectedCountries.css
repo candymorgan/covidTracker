@@ -1,5 +1,5 @@
 .childContainer2{
-    height: 500px;
+    /* height: 550px; */
     margin-top: 60px;
     border-radius: 5px;
     background-color: #ffffff;
@@ -17,7 +17,7 @@
   }
   
   .writeUp{
-    height: 28px;
+    /* height: 28px; */
     width: 320px;
     /* border: 2px solid red; */
     margin-top: 40px;
@@ -37,8 +37,12 @@
     position: absolute;
     top: 576px;
     left: 200px;
-    border: 1px solid #12790e
+    /* border: 1px solid #12790e; */
   
+  }
+  .countries{
+    border: 1px solid #F1F4FA;
+    border-radius: 10px;
   }
   
   .generalCaseContainer{
@@ -57,17 +61,23 @@
   .cases-grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border: 1px solid red;
+  /* border: 1px solid darkblue */
+  }
+
+  .caseData{
+    /* height: 307px; */
+    /* width: 380px; */
+    border: 1px solid red;
   }
   
   .country{
-    padding:10px 20px;
+    padding:5px 20px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid indigo;
+    /* border: 1px solid indigo; */
   }
   
   .nameLogo_div, .nameLogo_div2, .nameLogo_div3, .nameLogo_div4{
@@ -79,9 +89,9 @@
     /* border: 2px solid #2B6FF3; */
   }
   
-  .countryLogo1, .countryLogo2, .countryLogo3, .countryLogo4{
+  /* .countryLogo1, .countryLogo2, .countryLogo3, .countryLogo4{
     height: 36px;
     width: 36px;
-    /* margin-top: 10px; */
+    margin-top: 10px;
     border: 1px solid fuchsia;
-  }
+  } */
