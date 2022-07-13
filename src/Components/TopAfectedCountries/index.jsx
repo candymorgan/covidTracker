@@ -16,14 +16,15 @@ const TopAfectedCountries = () => {
           <div className="childContainer2_Circle">
             <div className="writeUp"><h3>Top Affected Countries</h3></div>
             <div className="childContainer2_Ptag"><p>Last Updated: May 22, 2020</p></div>
+            <h3 className="affected">Italy</h3>
           </div>
 
 
           <div className="generalCaseContainer">
             <div className="countriesContainer">
-              <h3>Countries</h3>
               <div className="cases-grid">
                 <div className="countries">
+                <h3>Countries</h3>
                   <div className="country">
                     <div className="nameLogo_div">
                       <div className="countryLogo1">
@@ -65,7 +66,14 @@ const TopAfectedCountries = () => {
                   </div>
                 </div>
 
-                <div className="caseData">yyyyy</div>
+                <div className="caseData">
+                  <div className="box">Total Cases</div>
+                  <div className="box">Active Cases</div>
+                  <div className="box">Recovered</div>
+                  <div className="box">Total Deaths</div>
+                  <div className="box">New Cases</div>
+                  <div className="box">New Deaths</div>
+                </div>
                 <div className="worldmap">
                   <img src={Rectangle34} alt="" />
                 </div>
