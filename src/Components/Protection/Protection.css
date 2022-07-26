@@ -14,7 +14,7 @@
   }
   .rightContent p{
     width: 544px;
-    height: 116px;
+    /* height: 116px; */
     line-height: 29.04px;
   }
   .rightContent h3{
@@ -31,7 +31,6 @@
     margin-top: 20px;
     text-align: center;
     /* border: 1px solid red; */
-    /* border: 1px solid palegreen; */
   }
   
   .image1, .image2, .image3, .image4, .image5{
@@ -51,6 +50,34 @@
     border-radius: 50%;
     margin-left: 35px;
     margin-top: 10px;
-    /* border:1px solid greenyellow; */
+    border:1px solid greenyellow;
+  }
+
+  @media  only screen and (min-width: 320px) and (max-width: 480px){
+    .childContainer4{
+      padding: 20px;
+      display: block;
+    }
+
+    .images{
+      gap: 20px;
+    }
+
+    .rightContent p{
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .rightContent h1{
+      margin-top: 40px;
+      font-size: 36px;
+    }
+
+    .image1, .image2, .image3, .image4, .image5{
+      height: 141px;
+      width: 124px;
+    }
+    
+
   }
   

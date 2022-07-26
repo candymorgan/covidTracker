@@ -22,8 +22,6 @@ body{
 }
 
 .covidTracker{
-  height: 30px;
-  width: 210px;
   /* border: 1px solid pink; */
   position: absolute;
   top: 137px;
@@ -39,7 +37,7 @@ body{
   border-radius: 5px;
   /* position: absolute; */
   /* top: 256px; */
-  /* border: 1px solid orange; */
+  border: 1px solid orange;
 }
 
 .childContainer1{
@@ -70,6 +68,14 @@ body{
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
+
+}
+
+@media  only screen and (min-width: 320px) and (max-width: 500px){
+  .container2{
+    margin-left: 130px;
+  }
+  
 
 }
 
