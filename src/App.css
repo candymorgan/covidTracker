@@ -37,7 +37,7 @@ body{
   border-radius: 5px;
   /* position: absolute; */
   /* top: 256px; */
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
 }
 
 .childContainer1{
@@ -73,7 +73,7 @@ body{
 
 @media  only screen and (min-width: 320px) and (max-width: 500px){
   .container2{
-    margin-left: 130px;
+    margin-left: 110px;
   }
   
 
