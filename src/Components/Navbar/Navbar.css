@@ -76,7 +76,7 @@
     .navcontainer{
       display: block;
       /* border: 1px solid red; */
-      width: 480px;
+      width: 440px;
       height: 100px;
       background-color: #fdfcfc;
       box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.1);

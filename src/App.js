@@ -17,7 +17,7 @@ function App() {
       <div className="covidTracker">
         <h2>COVID-19 Tracker</h2>
       </div>
-
+      
       <div className="container2">
         <div className="childContainer1">
           <GlobalStats color="total" title="Total Cases" caseCount={29620000} caseDifference={"+" + 23344} />
