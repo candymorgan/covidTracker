@@ -1,6 +1,6 @@
 import React from 'react';
 import './Protection.css';
-import maskman1 from '../../maskman1.svg'
+import maskman2 from '../../maskman2.jpeg'
 import Ellipse12 from '../../Ellipse12.svg'
 import Ellipse13 from '../../Ellipse13.svg' 
 import Ellipse14 from '../../Ellipse14.svg'
@@ -13,7 +13,7 @@ const Protection = () => {
         <>
         <div className="childContainer4">
           <div className="leftImage">
-          <img src={maskman1} alt="" />
+          <img src={maskman2} alt="" />
           </div>
           <div className="rightContent">
             <h1>How can I protect myself from Covid-19?</h1>
