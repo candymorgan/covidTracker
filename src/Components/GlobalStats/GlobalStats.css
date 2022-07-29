@@ -71,7 +71,7 @@
       color: #AA2A2A;
   }
 
-  @media  only screen and (min-width: 320px) and (max-width: 500px){
+  @media  only screen and (max-width: 500px){
     .childContainer1{
       display: block;
       height: 930px;
