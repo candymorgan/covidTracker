@@ -72,8 +72,8 @@ body{
 
 @media  only screen and(max-width: 500px){
   .container2{
-    width: 50%;
-    border: 1px solid red;
+    width: 500px;
+    /* border: 1px solid red; */
     
   }
 

@@ -59,15 +59,13 @@
 
   @media  only screen and (max-width: 500px){
     .childContainer4{
-      justify-content: center;
-      align-items: center;
       /* padding: 10px; */
       display: block;
     }
 
     .images{
-      gap: 15px;
-      border: 1px solid red;
+      gap: 20px;
+      /* border: 1px solid red; */
     }
 
     .rightContent p{
@@ -87,6 +85,7 @@
 
     .leftImage img{
       width: 300px;
+      margin-left: 100px;
       /* border: 1px solid red; */
     }
 
