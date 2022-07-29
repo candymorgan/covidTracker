@@ -118,13 +118,13 @@
     }
 
     .email input{
-      width: 80%;
+      width: 70%;
       margin-left: 20px;
       /* border-bottom: 1px solid; */
     }
 
     .email{
-      width: 470px;
+      width: 450px;
     }
 
   }
