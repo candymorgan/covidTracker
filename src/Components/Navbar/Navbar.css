@@ -1,11 +1,15 @@
 .navcontainer{
     display: flex;
     justify-content: space-around;
-    /* width: 100%; */
+    width: 100%;
+    top: 0px;
     height: 79px;
     background-color: #ffffff;
     box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.1);
     font-size: 14px;
+    position: fixed;
+    z-index: 1;
+    
   }
   
   
