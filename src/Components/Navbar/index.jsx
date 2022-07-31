@@ -1,6 +1,6 @@
-import React from 'react'
-import './Navbar.css'
-import logo1 from '../../logo1.svg'
+import React from "react";
+import "./Navbar.css";
+import logo1 from "../../logo1.svg";
 
 const Navbar = () => {
   return (
@@ -9,13 +9,24 @@ const Navbar = () => {
         <div className="covidLogo">
           <img src={logo1} alt="" />
         </div>
-        <div className="covidWriteUp"><h2><a href="">Covid19Strain</a></h2></div>
+        <div className="covidWriteUp">
+          <h2>
+            <a href="">Covid19Strain</a>
+          </h2>
+        </div>
       </div>
+
       <div className="navLinks">
         <ul>
-          <li className="home"><a href="">HOME</a></li>
-          <li><a href="">SYMPTOMS</a></li>
-          <li><a href="">PROTECTION</a></li>
+          <li className="home">
+            <a href="">HOME</a>
+          </li>
+          <li>
+            <a href="">SYMPTOMS</a>
+          </li>
+          <li>
+            <a href="">PROTECTION</a>
+          </li>
         </ul>
       </div>
 
@@ -28,7 +39,7 @@ const Navbar = () => {
         <rect y="60" width="100" height="20"></rect>
       </svg> */}
     </nav>
-  )
-}
+  );
+};
 
 export default Navbar;
