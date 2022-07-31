@@ -16,7 +16,7 @@ body {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  border: 3px solid #2b6ff3;
+  /* border: 3px solid #2b6ff3; */
 }
 
 .covidTracker {
@@ -27,7 +27,7 @@ body {
 }
 .parentContainer {
   width: 100%;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@ body {
   border-radius: 5px;
   /* position: absolute; */
   /* top: 256px; */
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .childContainer1 {
@@ -82,6 +82,6 @@ body {
   }
   .container2 {
     width: 300px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 }

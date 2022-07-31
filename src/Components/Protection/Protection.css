@@ -61,9 +61,9 @@
   border: 1px solid greenyellow;
 }
 
-.leftImage {
-  /* border: 1px solid red; */
-}
+/* .leftImage {
+  border: 1px solid red;
+} */
 
 @media only screen and (max-width: 500px) {
   .childContainer4 {
@@ -81,17 +81,16 @@
     margin-top: 10px;
   }
 
-<<<<<<< HEAD
+
     .leftImage img{
       width: 300px;
       /* border: 1px solid red; */
     }
-=======
   .rightContent h1 {
     margin-top: 40px;
     font-size: 36px;
   }
->>>>>>> db5ceac0c779d5ddd4c1096587f2f34b4fb34510
+
 
   .image1,
   .image2,
