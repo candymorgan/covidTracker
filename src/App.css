@@ -8,38 +8,42 @@
 }
 /* my covid19 react project */
 
-body{
+body {
   background-color: #ecf0f0;
 }
 
-
-
-.littleCircle{
+.littleCircle {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  border: 3px solid #2B6FF3;
+  border: 3px solid #2b6ff3;
 }
 
-.covidTracker{
+.covidTracker {
   /* border: 1px solid pink; */
-  position: absolute;
+  /* position: absolute; */
   top: 137px;
-  left: 89px;
-  
+  /* left: 89px; */
 }
-
-.container2{
+.parentContainer {
+  width: 100%;
+  border: 1px solid orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container2 {
   width: 80%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   margin-top: 90px;
   border-radius: 5px;
   /* position: absolute; */
   /* top: 256px; */
-  /* border: 1px solid orange; */
+  border: 1px solid blue;
 }
 
-.childContainer1{
+.childContainer1 {
   height: 200px;
   width: 100%;
   background-color: #ffffff;
@@ -50,41 +54,34 @@ body{
   /* border: 1px solid orchid; */
 }
 
-
-
-
 /* .countryName1, .countryName2, .countryName3, .countryName4{
   width: 29PX;
   height: 17px;
   margin-top: 20px;
 } */
-.country:hover{
+.country:hover {
   background: rgba(238, 238, 238, 0.34);
-
 }
-.figures1{
-  color: #2B6FF3;
+.figures1 {
+  color: #2b6ff3;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-
 }
 
-/* @media  only screen and(max-width: 500px){
-  .container2{
-    width: 500px;
-    border: 1px solid red;
-    
+@media only screen and(max-width: 500px) {
+  .childContainer1 {
+    height: 200px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    border-radius: 5px;
+    /* border: 1px solid orchid; */
   }
-
-  
-
-} */
-
-
-
-
-
-
-
-
+  .container2 {
+    width: 300px;
+    border: 1px solid red;
+  }
+}
