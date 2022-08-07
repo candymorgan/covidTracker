@@ -2,14 +2,13 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-
   height: 70px;
-  background-color: #ffffff;
-  box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
   position: fixed;
   z-index: 1;
+  background-color: #fdfcfc;
 }
+
+
 
 .covid19Strain {
   /* height: 50px; */
@@ -64,7 +63,7 @@
 
 .date {
   height: 46px;
-  width: 197px;
+  /* width: max-content; */
   margin-top: 15px;
   text-align: center;
   /* border: 1px solid blue; */
@@ -77,21 +76,20 @@
   .navcontainer {
     display: block;
     height: 110px;
-    background-color: #fdfcfc;
+    /* border:1px solid green; */
     box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .navLinks {
-    display: none;
-  }
+   .navLinks {
+  display: none;
+} 
+   
 
   .date {
     /* display: none; */
     margin-top: 0px;
-    text-align: center;
-    margin-left: 120px;
-    background-color: #c4c4c41f;
-    border-radius: 3px;
+    margin-left: 0px;
+    /* border: 1px solid red; */
   }
 
   .covid19Strain {

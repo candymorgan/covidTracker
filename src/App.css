@@ -21,26 +21,27 @@ body {
 
 .covidTracker {
   /* border: 1px solid pink; */
-  /* position: absolute; */
-  top: 137px;
-  /* left: 89px; */
+  position: absolute;
+  top: 77px;
+  left: 89px;
 }
 .parentContainer {
   width: 100%;
-  /* border: 1px solid orange; */
+  border: 1px solid orange;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 .container2 {
   width: 80%;
   /* margin: 0 auto; */
   margin-top: 90px;
   border-radius: 5px;
-  /* position: absolute; */
+  /* position: relative; */
   /* top: 256px; */
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
 }
 
 .childContainer1 {
@@ -70,18 +71,23 @@ body {
 }
 
 @media only screen and(max-width: 500px) {
-  .childContainer1 {
+  /* .childContainer1 {
     height: 200px;
-    width: 100%;
+    width: 60%;
     background-color: #ffffff;
     display: flex;
     justify-content: space-around;
     padding: 15px;
     border-radius: 5px;
-    /* border: 1px solid orchid; */
-  }
+    margin: 0 39px 0 39px;
+
+
+    border: 1px solid orchid;
+  } */
   .container2 {
     width: 300px;
+    
     /* border: 1px solid red; */
   }
+  
 }

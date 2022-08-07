@@ -10,9 +10,9 @@
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  position: absolute;
+  /* position: absolute; */
   background-color: rgba(214, 50, 50, 0.04);
-  top: 445px;
+  
   /* border: 2px solid gold; */
 }
 .affected {
@@ -80,7 +80,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* border: 1px solid rgb(172, 122, 221); */
+  border: 1px solid rgb(172, 122, 221);
 }
 
 .nameLogo_div,

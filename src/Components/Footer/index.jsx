@@ -6,9 +6,11 @@ const Footer = () => {
     <>
       <div className="childContainer5">
         <div className="subContainer">
-          <div className="aboutContainer">
-            <h2>About</h2>
+          <div className="aboutAndContact">
+            
             <div className="aboutDetails">
+            <h5>About</h5>
+          <div className="aboutContainer">
               <h3>API</h3>
               <h3>Contact</h3>
               <h3>About</h3>
@@ -16,8 +18,8 @@ const Footer = () => {
           </div>
 
           <div className="contactContainer">
+          <h5>Contact</h5>
             <div className="contactDetails">
-              <h2>Contact</h2>
               <div>
                 <h3>info@coronatracker.com</h3>
                 <h3>Instagram</h3>
@@ -27,14 +29,19 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          </div>
 
           <div className="email">
-            <h2>Join our newsletter</h2>
+            <h5>Join our newsletter</h5>
             <div>
               <h3>Your email</h3>
               <input type="email" />
             </div>
           </div>
+        </div>
+        <div className="lastItem">
+          <h5>Term & Conditions</h5>
+          <h5>Privacy Policy</h5>
         </div>
       </div>
     </>
