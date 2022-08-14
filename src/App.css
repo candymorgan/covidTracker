@@ -71,9 +71,6 @@ body {
 }
 
 @media only screen and(max-width: 500px) {
-  .parentContainer{
-    padding: 0 70px;
-  }
   
   /* .childContainer1 {
     height: 200px;
@@ -90,6 +87,7 @@ body {
   } */
   .container2 {
     width: 100px;
+    padding: 0 2rem;
     /* border: 1px solid red; */
   }
   
