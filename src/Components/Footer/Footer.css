@@ -38,9 +38,9 @@
 }
 
 .contactContainer {
-  margin: 80px;
+  margin-top: 80px;
   /* height: 300px; */
-  width: 40%;
+  /* width: 40%; */
   /* border: 1px solid rgb(177, 166, 172); */
 }
 
@@ -81,6 +81,8 @@
 
 .lastItem{
   width: 30%;
+  margin-top: 100px;
+  margin-left: 70px;
   display: flex;
   justify-content:space-evenly;
   /* border: 1px solid red; */
@@ -88,7 +90,45 @@
 
 @media only screen and (max-width: 500px){
   .subContainer{
-    display: block;
+    display:flex; 
+    flex-direction: column; 
+  }
+
+  .aboutDetails {
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 30px;
+  }
+
+  .aboutContainer {
+    margin-top: 30px;
+  }
+
+  .aboutAndContact{
+    display: flex; 
+    flex-direction: column;
+    
+
+  }
+
+  .contactDetails {
+    margin-top: 30px;
+  }
+
+  .contactContainer {
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+
+  .email {
+    margin-left: 30px;
+    width: 80%;
+  }
+
+  .lastItem{
+    width: 80%;
+    display: flex;
+    justify-content:space-evenly;
   }
 }
 

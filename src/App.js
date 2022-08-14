@@ -1,4 +1,6 @@
 import logo from "./logo.svg";
+import React, {useReducer, useEffect, useState} from "react";
+import Axios from 'axios';
 import "./App.css";
 import Covid19 from "./Components/Covid19";
 import Navbar from "./Components/Navbar";
@@ -7,7 +9,48 @@ import TopAfectedCountries from "./Components/TopAfectedCountries";
 import Symptoms from "./Components/Symptoms";
 import Protection from "./Components/Protection";
 import Footer from "./Components/Footer";
+
+
+
+const initialState = {
+  loading: true,
+  cases: {},
+}
+
+const reducer = (state, action) => {
+  switch(action.type) {
+    case 'FETCH_SUCESS':
+      return{
+        loading: false,
+        cases: action.payload
+      }
+  }
+
+  }
+ 
+
 function App() {
+
+  const [cases, setCases] = useState({})
+  const [loading, setloading] = useState(true)
+
+  // useEffect(() =>{
+  //   fetch('https://api.covid19api.com/summary')
+  //   .then(res => {
+  //     console.log(res);
+  //     setloading(false)
+  //   })  
+  // }, [])
+  
+  const [state, dispatch] = useReducer(reducer, initialState)
+
+  useEffect(() => {
+    Axios.get('https://api.covid19api.com/summary')
+    .then(res => {
+      dispatch({type:'FETCH_SUCESS', payload: res.data})
+    })
+
+  }, [])
   return (
     <div className="App">
       <Navbar />
@@ -23,25 +66,25 @@ function App() {
             <GlobalStats
               color="total"
               title="Total Cases"
-              caseCount={29620000}
+              caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalConfirmed}
               caseDifference={"+" + 23344}
             />
             <GlobalStats
               color="active"
               title="Active Cases"
-              caseCount={9620000}
+              caseCount={state.loading ?  "Loading....." : state.cases.Global.NewConfirmed}
               caseDifference={"+" + 23344}
             />
             <GlobalStats
               color="recovered"
               title="Recovered"
-              caseCount={5620000}
+              caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalRecovered}
               caseDifference={"+" + 23344}
             />
             <GlobalStats
               color="deaths"
               title="Deaths"
-              caseCount={8620000}
+              caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalDeaths}
               caseDifference={"+" + 23344}
             />
 

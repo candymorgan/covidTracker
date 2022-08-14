@@ -27,7 +27,7 @@ body {
 }
 .parentContainer {
   width: 100%;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@ body {
   border-radius: 5px;
   /* position: relative; */
   /* top: 256px; */
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .childContainer1 {
@@ -71,6 +71,10 @@ body {
 }
 
 @media only screen and(max-width: 500px) {
+  .parentContainer{
+    padding: 0 70px;
+  }
+  
   /* .childContainer1 {
     height: 200px;
     width: 60%;
@@ -85,8 +89,7 @@ body {
     border: 1px solid orchid;
   } */
   .container2 {
-    width: 300px;
-    
+    width: 100px;
     /* border: 1px solid red; */
   }
   
