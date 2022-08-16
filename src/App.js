@@ -33,14 +33,39 @@ function App() {
 
   const [cases, setCases] = useState({})
   const [loading, setloading] = useState(true)
+  const [dataObj, setDataObj] = useState({})
+  const [countries, setCountries] = useState([])
+  
+  const fetchData = async () => {
+    const apiResponse = await fetch('https://disease.sh/v3/covid-19/all')
+    const jsonResponse = await apiResponse.json()
+    
+    setDataObj(jsonResponse)
+   
+    
+  }
 
-  // useEffect(() =>{
-  //   fetch('https://api.covid19api.com/summary')
-  //   .then(res => {
-  //     console.log(res);
-  //     setloading(false)
-  //   })  
-  // }, [])
+  const fetchCountries = async() => {
+    const apiCountries = await fetch('https://disease.sh/v3/covid-19/countries')
+    const jsonCountries = await apiCountries.json()
+
+    setCountries(jsonCountries)
+
+  }
+  console.log(countries, "this is the countries data")
+
+  useEffect(() =>{
+    fetchData()
+    fetchCountries()
+    // fetch('https://api.covid19api.com/summary')
+    // .then(res => {
+    // if(res.ok) {
+    //   return res.json()
+    // }
+    //   throw res
+    // }).then(data => console.log(data, 'data is data') )  
+  }, [])
+  console.log(dataObj, 'async await')
   
   const [state, dispatch] = useReducer(reducer, initialState)
 
@@ -51,7 +76,7 @@ function App() {
     })
 
   }, [])
-  return (
+  return (  
     <div className="App">
       <Navbar />
       <div className="littleCircle"></div>
@@ -66,13 +91,14 @@ function App() {
             <GlobalStats
               color="total"
               title="Total Cases"
-              caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalConfirmed}
+              caseCount={dataObj?.cases?.toLocaleString() || "Loading...."}
               caseDifference={"+" + 23344}
             />
             <GlobalStats
               color="active"
               title="Active Cases"
-              caseCount={state.loading ?  "Loading....." : state.cases.Global.NewConfirmed}
+              caseCount={dataObj?.active?.toLocaleString() || "Loading...."}
+              // caseCount={state.loading ?  "Loading....." : state.cases.Global.NewConfirmed.toLocaleString()}
               caseDifference={"+" + 23344}
             />
             <GlobalStats
@@ -84,7 +110,7 @@ function App() {
             <GlobalStats
               color="deaths"
               title="Deaths"
-              caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalDeaths}
+              caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalDeaths.toLocaleString()}
               caseDifference={"+" + 23344}
             />
 
@@ -94,7 +120,7 @@ function App() {
           <div className="square4"><div className="circle4"></div></div> */}
           </div>
 
-          <TopAfectedCountries />
+          <TopAfectedCountries countries={countries} />
 
           <Symptoms />
 

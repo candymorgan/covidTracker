@@ -9,13 +9,15 @@ import Rectangle34 from '../../Rectangle34.svg'
 
 
 
-const TopAfectedCountries = () => {
+const TopAfectedCountries = ({countries}) => {
   return (
+
     <>
      <div className="childContainer2">
           <div className="childContainer2_Circle">
             <div className="writeUp"><h3>Top Affected Countries</h3></div>
-            <div className="childContainer2_Ptag"><p>Last Updated: May 22, 2020</p></div>
+            <div className="childContainer2_Ptag"><p>Last Updated: {new Date().toDateString()} </p></div>
+      
             <h3 className="affected">Italy</h3>
           </div>
 
@@ -25,55 +27,24 @@ const TopAfectedCountries = () => {
               <div className="cases-grid">
                 <div className="countries">
                 <h3>Countries</h3>
-                  <div className="country">
-                    <div className="nameLogo_div">
-                      <div className="countryLogo1">
-                        <img src={us} alt="" />
-                      </div>
-                      <div className="countryName1">USA</div>
-                    </div>
-                    <div className="figures1">1244355637</div>
-                  </div>
+                  
 
-                  <div className="country">
+                  {
+                    countries?.map(country => (
+                    <div className="country" key={country.country}>
                     <div className="nameLogo_div2">
                       <div className="countryLogo2">
-                      <img src={it} alt="" />
+                      <img src={country?.countryInfo?.flag} alt={country?.country} />
                       </div>
-                      <div className="countryName2">Italy</div>
+                      <div className="countryName2">{country.country}</div>
                     </div>
-                    <div className="figures2">65637816273</div>
-                  </div>
+                    <div className="figures2">{country.cases}</div>
+                  </div>))
+                  }
 
-                  <div className="country">
-                    <div className="nameLogo_div3">
-                      <div className="countryLogo3">
-                      <img src={ca} alt="" />
-                      </div>
-                      <div className="countryName3">Canada</div>
-                    </div>
-                    <div className="figures3">65258485217</div>
-                  </div>
+                  
 
-                  <div className="country">
-                    <div className="nameLogo_div4">
-                      <div className="countryLogo4">
-                      <img src={es} alt="" />
-                      </div>
-                      <div className="countryName4">USA</div>
-                    </div>
-                    <div className="figures4">65258415278</div>
-                  </div>
-                </div>
-
-                <div className="caseData">
-                  <div className="box">Total Cases</div>
-                  <div className="box">Active Cases</div>
-                  <div className="box">Recovered</div>
-                  <div className="box">Total Deaths</div>
-                  <div className="box">New Cases</div>
-                  <div className="box">New Deaths</div>
-                </div>
+                
                 <div className="worldmap">
                   <img src={Rectangle34} alt="" />
                 </div>
@@ -86,6 +57,7 @@ const TopAfectedCountries = () => {
 
 
 
+        </div>
         </div>
     </>
   )

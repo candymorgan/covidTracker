@@ -41,6 +41,8 @@
   /* border: 1px solid #12790e; */
 }
 .countries {
+  height: 370px;
+  overflow-y: scroll;
   border: 1px solid #f1f4fa;
   border-radius: 10px;
 }
@@ -97,7 +99,14 @@
   padding: 20px;
   height: 80px;
   border-radius: 5px;
-  border: 1px solid #f1f4fa;
+  border: 1px solid #858c9b;
+}
+
+.countryLogo2 > img{
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border: 1px solid red;
 }
 
 @media only screen and (max-width: 500px) {

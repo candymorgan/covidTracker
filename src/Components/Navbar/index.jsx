@@ -1,17 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect,} from "react";
 import "./Navbar.css";
 import logo1 from "../../logo1.svg";
 
 
 
-
+ 
 const Navbar = () => {
-  const [date, setDate] = useState()
-
-  useEffect(() => {
-    setDate(new Date().toDateString())
-  }, [])
+ 
   return (
+    
     <nav className="navcontainer">
       <div className="covid19Strain">
         <div className="covidLogo">
@@ -39,7 +36,7 @@ const Navbar = () => {
       </div>
 
       <div className="date">
-        <p>Updated: {date} </p>
+        <p>Updated: {new Date().toDateString()} </p>
       </div>
       {/* <svg viewBox="0 0 100 80" width="40" height="40">
         <rect width="100" height="20"></rect>
@@ -47,6 +44,7 @@ const Navbar = () => {
         <rect y="60" width="100" height="20"></rect>
       </svg> */}
     </nav>
+    
   );
 };
 
