@@ -70,11 +70,14 @@
   .childContainer1 {
     display: block;
     height: 930px;
-    /* width: 10%; */
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    width: 320PX;
     padding: 25px;
     margin-top: 110px;
     /* margin: auto; */
-    background-color: #ffffff;
+    background-color: #fcfcfc;
     /* padding: 15px; */
     border-radius: 5px;
     /* border: 1px solid orchid; */

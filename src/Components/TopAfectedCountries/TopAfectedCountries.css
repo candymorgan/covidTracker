@@ -2,7 +2,7 @@
   height: 570px;
   margin-top: 60px;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #fafafa;
   /* display: flex; */
   /* border: 2px solid greenyellow; */
 }
@@ -29,7 +29,7 @@
 }
 
 .childContainer2_Ptag {
-  width: 210px;
+  width: 230px;
   margin-top: 10px;
   /* border: 1px solid orange; */
   margin-left: 35px;
@@ -113,8 +113,8 @@
   .childContainer2 {
     height: 650px;
     margin-top: 60px;
-    /* width: 90%; */
-    /* margin-left: 25px; */
+    width: 88%;
+    margin-left: 20px;
   }
 
   .childContainer2_Circle {
@@ -124,6 +124,7 @@
 
   .writeUp {
     position: absolute;
+    margin-left: 20px;
   }
 
   .childContainer2_Ptag {

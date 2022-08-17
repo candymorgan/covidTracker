@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
-import React, {useReducer, useEffect, useState} from "react";
-import Axios from 'axios';
+import React, { useReducer, useEffect, useState } from "react";
+// import Axios from 'axios';
 import "./App.css";
 import Covid19 from "./Components/Covid19";
 import Navbar from "./Components/Navbar";
@@ -12,40 +12,40 @@ import Footer from "./Components/Footer";
 
 
 
-const initialState = {
-  loading: true,
-  cases: {},
-}
+// const initialState = {
+//   loading: true,
+//   cases: {},
+// }
 
-const reducer = (state, action) => {
-  switch(action.type) {
-    case 'FETCH_SUCESS':
-      return{
-        loading: false,
-        cases: action.payload
-      }
-  }
+// const reducer = (state, action) => {
+//   switch(action.type) {
+//     case 'FETCH_SUCESS':
+//       return{
+//         loading: false,
+//         cases: action.payload
+//       }
+//   }
 
-  }
- 
+//   }
+
 
 function App() {
-
-  const [cases, setCases] = useState({})
-  const [loading, setloading] = useState(true)
   const [dataObj, setDataObj] = useState({})
   const [countries, setCountries] = useState([])
-  
+  // const [cases, setCases] = useState({})
+  // const [loading, setloading] = useState(true)
+
+
   const fetchData = async () => {
     const apiResponse = await fetch('https://disease.sh/v3/covid-19/all')
     const jsonResponse = await apiResponse.json()
-    
+
     setDataObj(jsonResponse)
-   
-    
+
+
   }
 
-  const fetchCountries = async() => {
+  const fetchCountries = async () => {
     const apiCountries = await fetch('https://disease.sh/v3/covid-19/countries')
     const jsonCountries = await apiCountries.json()
 
@@ -54,7 +54,7 @@ function App() {
   }
   console.log(countries, "this is the countries data")
 
-  useEffect(() =>{
+  useEffect(() => {
     fetchData()
     fetchCountries()
     // fetch('https://api.covid19api.com/summary')
@@ -65,18 +65,17 @@ function App() {
     //   throw res
     // }).then(data => console.log(data, 'data is data') )  
   }, [])
-  console.log(dataObj, 'async await')
-  
-  const [state, dispatch] = useReducer(reducer, initialState)
 
-  useEffect(() => {
-    Axios.get('https://api.covid19api.com/summary')
-    .then(res => {
-      dispatch({type:'FETCH_SUCESS', payload: res.data})
-    })
+  // const [state, dispatch] = useReducer(reducer, initialState)
 
-  }, [])
-  return (  
+  // useEffect(() => {
+  //   Axios.get('https://api.covid19api.com/summary')
+  //   .then(res => {
+  //     dispatch({type:'FETCH_SUCESS', payload: res.data})
+  //   })
+
+  // }, [])
+  return (
     <div className="App">
       <Navbar />
       <div className="littleCircle"></div>
@@ -104,20 +103,19 @@ function App() {
             <GlobalStats
               color="recovered"
               title="Recovered"
-              caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalRecovered}
+              caseCount={dataObj?.recovered?.toLocaleString() || "Loading...."}
+              // caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalRecovered}
               caseDifference={"+" + 23344}
             />
             <GlobalStats
               color="deaths"
               title="Deaths"
-              caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalDeaths.toLocaleString()}
+              caseCount={dataObj?.deaths?.toLocaleString() || "Loading...."}
+              // caseCount={state.loading ?  "Loading....." : state.cases.Global.TotalDeaths.toLocaleString()}
               caseDifference={"+" + 23344}
             />
 
-            {/* <div className="square1"><div className="circle1"></div></div>
-          <div className="square2"><div className="circle2"></div></div>
-          <div className="square3"><div className="circle3"></div></div>
-          <div className="square4"><div className="circle4"></div></div> */}
+
           </div>
 
           <TopAfectedCountries countries={countries} />

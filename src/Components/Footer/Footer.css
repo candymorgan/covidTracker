@@ -3,7 +3,7 @@
   /* width: 100%; */
   margin-top: 180px;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #fcfcfc;
   /* border: 1px solid blue; */
 }
 
@@ -90,7 +90,10 @@
 
 @media only screen and (max-width: 500px){
   .childContainer5 {
-    height: auto;
+    height: 670px;
+    width: 88%;
+    margin-left: 20px;
+
   }
   .subContainer{
     display:flex; 
