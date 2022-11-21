@@ -39,6 +39,7 @@ function App() {
   const fetchData = async () => {
     const apiResponse = await fetch('https://disease.sh/v3/covid-19/all')
     const jsonResponse = await apiResponse.json()
+    console.log(jsonResponse, 'All response')
 
     setDataObj(jsonResponse)
 

@@ -30,6 +30,7 @@
   height: 200px;
   width: 200px;
   /* border: 1px solid blue; */
+  margin-bottom: 15px;
   border-radius: 50%;
 }
 .circle.total {
@@ -66,28 +67,19 @@
   color: #aa2a2a;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .childContainer1 {
     display: block;
     height: 930px;
     align-items: center;
     justify-content: center;
-    margin-left: 25px;
-    width: 320PX;
-    padding: 25px;
-    margin-top: 110px;
-    /* margin: auto; */
+    margin-top: 130px;
     background-color: #fcfcfc;
-    /* padding: 15px; */
     border-radius: 5px;
     /* border: 1px solid orchid; */
   }
 
-  .container2 {
-    width: 100%;
-    margin-top: 40px;
-    border-radius: 5px;
-  }
+  
   .globalstats {
     width: 100%;
     border-radius: 5px;

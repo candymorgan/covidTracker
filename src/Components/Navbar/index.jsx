@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
         <div className="covidWriteUp">
           <h2>
-            <a href="">Covid19Strain</a>
+            <a href="Covid19Strai">Covid19Strain</a>
           </h2>
         </div>
       </div>
@@ -24,13 +24,13 @@ const Navbar = () => {
       <div className="navLinks">
         <ul>
           <li className="home">
-            <a href="">HOME</a>
+            <a href="HOME">HOME</a>
           </li>
           <li>
-            <a href="">SYMPTOMS</a>
+            <a href="SYMPTOMS">SYMPTOMS</a>
           </li>
           <li>
-            <a href="">PROTECTION</a>
+            <a href="PROTECTION">PROTECTION</a>
           </li>
         </ul>
       </div>

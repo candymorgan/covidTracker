@@ -31,10 +31,10 @@
   /* border: 1px solid green; */
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .childContainer3 {
     display: block;
-    margin-top: 20px;
+    /* border: 2px solid hotpink; */
   }
 
   .leftInfo p {

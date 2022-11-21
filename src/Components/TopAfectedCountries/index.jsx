@@ -10,26 +10,16 @@ const TopAfectedCountries = ({countries}) => {
   const [countryObj, setCountryObj] = useState({})
 
 
-  // const handleClick = () => {
-  // const countryData =   countries.map((countName) => {
-  //   console.log(countryData , "wertyui")
-  //   return (
-  //     setCountryName(countryData)
-  //   )
-    
-  // }) 
-  
-  
-  // }
+ 
   const fetchCountryData = async () => {
     const countryData = await fetch(`https://disease.sh/v3/covid-19/countries/${countryName}`)
     const jsonResponse = await countryData.json()
     setCountryObj(jsonResponse)
   }
-  const handleClick = (countryname) => {
-    setCountryName(countryName)
-    fetchCountryData()
-  }
+  // const handleClick = (countryname) => {
+  //   setCountryName(countryName)
+  //   fetchCountryData()
+  // }
     
   
   return (
@@ -37,7 +27,7 @@ const TopAfectedCountries = ({countries}) => {
     <>
      <div className="childContainer2">
           <div className="childContainer2_Circle">
-            <div className="writeUp"><h3>Top Affected Countries</h3></div>
+            <div className="writeUp"><h2>Top Affected Countries</h2></div>
             <div className="childContainer2_Ptag"><p>Last Updated: {new Date().toDateString()} </p></div>
       
             <h3 className="affected">{countryName}</h3>
@@ -56,7 +46,7 @@ const TopAfectedCountries = ({countries}) => {
                     
                     countries?.map(country => (
                     <div className="country" key={country.country}>
-                   <button onClick={handleClick(country?.country)}> 
+                   <button> 
                      <div className="nameLogo_div2">
                       <div className="countryLogo2">
                       <img src={country?.countryInfo?.flag} alt={country?.country} />
@@ -77,16 +67,16 @@ const TopAfectedCountries = ({countries}) => {
                   <div className="caseData">
 
                     
-                    <div>Total Cases
+                    <div className='boxes'>Total Cases
                       <h5>67642687</h5>
                     </div>
-                    <div>Active Cases
+                    <div className='boxes'>Active Cases
                     <h5>67642687</h5>
                     </div>
-                    <div>Recovered</div>
-                    <div>Total Deaths</div>
-                    <div>New Cases</div>
-                    <div>New Deaths</div>
+                    <div className='boxes'>Recovered</div>
+                    <div className='boxes'>Total Deaths</div>
+                    <div className='boxes'>New Cases</div>
+                    <div className='boxes'>New Deaths</div>
                   </div>
 
                 
@@ -108,5 +98,5 @@ const TopAfectedCountries = ({countries}) => {
   )
 }
 
-export default TopAfectedCountries ;
+export default TopAfectedCountries;
 

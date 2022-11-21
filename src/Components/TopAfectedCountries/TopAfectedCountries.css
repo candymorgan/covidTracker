@@ -10,41 +10,42 @@
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  /* position: absolute; */
+  top: 360px;
+  position: absolute;
   background-color: rgba(214, 50, 50, 0.04);
-  
   /* border: 2px solid gold; */
 }
 .affected {
-  margin-left: 450px;
+  margin-left: 600px;
 }
 
 .writeUp {
   /* height: 28px; */
-  width: 320px;
+  width: 270px;
   /* border: 1px solid red; */
   margin-top: 40px;
   margin-left: 30px;
-  font-size: 24px;
 }
 
 .childContainer2_Ptag {
-  width: 230px;
+  /* width: 230px; */
   margin-top: 10px;
   /* border: 1px solid orange; */
   margin-left: 35px;
 }
 .countriesContainer {
+  width: 78%;
   position: absolute;
-  top: 576px;
+  top: 480px;
   left: 200px;
   /* border: 1px solid #12790e; */
 }
 .countries {
   height: 370px;
   overflow-y: scroll;
-  border: 1px solid #f1f4fa;
+  /* border: 1px solid #e20f8a; */
   border-radius: 10px;
+  /* margin-top: 20px; */
 }
 
 /* .generalCaseContainer{
@@ -62,7 +63,7 @@
 
 .cases-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 33% 33% 33%;
   /* border: 1px solid darkblue */
 }
 
@@ -74,6 +75,12 @@
   padding: 0 0 0 20px;
   /* border: 1px solid red; */
 }
+.boxes{
+  border: 1px solid #f1f4fa;
+  height: 85px;
+  width: 189px;
+  padding-top: 20px;
+}
 
 .country {
   padding: 7px 20px;
@@ -82,6 +89,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: none;
+  outline: none;
   /* border: 1px solid rgb(172, 122, 221); */
 }
 
@@ -91,30 +100,33 @@
 .nameLogo_div4 {
   display: flex;
   align-items: center;
-  gap: 20px;
   /* border: 2px solid #2B6FF3; */
 }
 
-.box {
+/* .box {
   padding: 20px;
   height: 80px;
   border-radius: 5px;
-  border: 1px solid #858c9b;
-}
+  border: 1px solid #ff1d83;
+} */
 
 .countryLogo2 > img{
   width: 20px;
   height: 15px;
   object-fit: cover;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
+/* .worldmap{
+  padding-left: 20px;
+  margin-left: 30px;
+  border: 1px solid;
+  margin-bottom: 20px;
+} */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .childContainer2 {
-    height: 650px;
+    height: 900px;
     margin-top: 60px;
-    width: 88%;
-    margin-left: 20px;
   }
 
   .childContainer2_Circle {
@@ -133,12 +145,12 @@
   }
 
   .cases-grid {
-    display: block;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 100%;
     /* border: 1px solid darkblue */
   }
 
   .countriesContainer {
+    width: 100%;
     position: relative;
     top: -90px;
     left: 0px;
@@ -146,27 +158,24 @@
   }
 
   .countries {
-    border: none;
+    width: 100%;
     border-radius: 10px;
   }
 
   .country {
-    width: 95%;
     margin-top: 0px;
-    padding: 0px 20px;
+    /* padding: 0px 20px; */
+    /* border: 1px solid green; */
   }
 
   .caseData {
-    grid-template-columns: 0.48fr 0.48fr;
-    gap: 20px;
-    padding: 0px;
+    /* grid-template-columns: 0.48fr 0.48fr; */
     margin-top: 80px;
   }
 
-  .box {
-    padding: 10px;
-    height: 60px;
-    border-radius: 5px;
+  .boxes {
+      height: 70px;
+      width: 160px;
   }
 
   .worldmap {
@@ -175,7 +184,7 @@
 
   .affected {
     position: relative;
-    top: 360px;
-    margin-left: 15px;
+    top: 580px;
+    margin-left: 20px;
   }
 }

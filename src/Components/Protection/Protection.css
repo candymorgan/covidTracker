@@ -65,16 +65,14 @@
   border: 1px solid red;
 } */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .childContainer4 {
-    width: 88%;
-    margin-left: 20px;
-    /* padding: 10px; */
+    padding: 10px;
     display: block;
   }
 
   .images {
-    gap: 20px;
+    /* gap: 20px; */
     /* border: 1px solid red; */
   }
 
@@ -103,10 +101,6 @@
     width: 124px;
   }
 
-  .leftImage img {
-    width: 300px;
-    /* border: 1px solid red; */
-  }
 }
 
 
