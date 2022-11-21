@@ -65,7 +65,7 @@
   border: 1px solid red;
 } */
 
-@media only screen and (max-device-width: 500px) {
+@media only screen and (max-device-width: 600px) {
   .childContainer4 {
     padding: 10px;
     display: block;
