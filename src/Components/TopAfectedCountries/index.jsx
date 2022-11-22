@@ -1,25 +1,39 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './TopAfectedCountries.css'
 import Rectangle34 from '../../Rectangle34.svg'
 
 
 
 
-const TopAfectedCountries = ({countries}) => {
+const TopAfectedCountries = () => {
   const [countryName, setCountryName] = useState("ITALY")
-  const [countryObj, setCountryObj] = useState({})
+  const [countryObj, setCountryObj] = useState([])
+  const [countryCases, setcountryCases] = useState(0)
 
 
- 
-  const fetchCountryData = async () => {
-    const countryData = await fetch(`https://disease.sh/v3/covid-19/countries/${countryName}`)
-    const jsonResponse = await countryData.json()
-    setCountryObj(jsonResponse)
+ useEffect(() => {
+  try {
+    const fetchCountryData = async () => {
+      const countryData = await fetch(`https://disease.sh/v3/covid-19/countries/`)
+      const jsonResponse = await countryData.json()
+      setCountryObj(jsonResponse)
+      console.log(jsonResponse, "this is top affected Api");
+      
+    }
+    fetchCountryData()
+    
+  } catch (error) {
+    console.log("here's an error", error);
   }
-  // const handleClick = (countryname) => {
-  //   setCountryName(countryName)
-  //   fetchCountryData()
-  // }
+
+ }, [])
+ 
+   
+ 
+ const handleClick = () => {
+  setCountryName(countryObj.country)
+  setcountryCases(countryObj.cases)
+ }
     
   
   return (
@@ -44,9 +58,9 @@ const TopAfectedCountries = ({countries}) => {
 
                   {
                     
-                    countries?.map(country => (
+                    countryObj?.map(country => (
                     <div className="country" key={country.country}>
-                   <button> 
+                   <button onClick={handleClick}> 
                      <div className="nameLogo_div2">
                       <div className="countryLogo2">
                       <img src={country?.countryInfo?.flag} alt={country?.country} />
@@ -68,15 +82,23 @@ const TopAfectedCountries = ({countries}) => {
 
                     
                     <div className='boxes'>Total Cases
-                      <h5>67642687</h5>
+                      <h4>{countryCases}</h4>
                     </div>
                     <div className='boxes'>Active Cases
-                    <h5>67642687</h5>
+                    <h4>{countryCases}</h4>
                     </div>
-                    <div className='boxes'>Recovered</div>
-                    <div className='boxes'>Total Deaths</div>
-                    <div className='boxes'>New Cases</div>
-                    <div className='boxes'>New Deaths</div>
+                    <div className='boxes'>Recovered
+                    <h4>{countryCases}</h4>
+                    </div>
+                    <div className='boxes'>Total Deaths
+                    <h4>{countryCases}</h4>
+                    </div>
+                    <div className='boxes'>New Cases
+                    <h4>{countryCases}</h4>
+                    </div>
+                    <div className='boxes'>New Deaths
+                    <h4>{countryCases}</h4>
+                    </div>
                   </div>
 
                 

@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
-import React, { useReducer, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 // import Axios from 'axios';
 import "./App.css";
-import Covid19 from "./Components/Covid19";
+// import Covid19 from "./Components/Covid19";
 import Navbar from "./Components/Navbar";
 import GlobalStats from "./Components/GlobalStats";
 import TopAfectedCountries from "./Components/TopAfectedCountries";
@@ -31,41 +30,48 @@ import Footer from "./Components/Footer";
 
 function App() {
   const [dataObj, setDataObj] = useState({})
-  const [countries, setCountries] = useState([])
+  // const [countries, setCountries] = useState([])
   // const [cases, setCases] = useState({})
   // const [loading, setloading] = useState(true)
 
-
-  const fetchData = async () => {
-    const apiResponse = await fetch('https://disease.sh/v3/covid-19/all')
-    const jsonResponse = await apiResponse.json()
-    console.log(jsonResponse, 'All response')
-
-    setDataObj(jsonResponse)
-
-
+useEffect(() =>{
+  try {
+    const fetchData = async () => {
+      const apiResponse = await fetch('https://disease.sh/v3/covid-19/all')
+      const jsonResponse = await apiResponse.json()
+      setDataObj(jsonResponse)
+      console.log(jsonResponse, 'All response')
+  
+    }
+    fetchData() 
+  } catch (error) {
+    console.log("there's an error", error);
   }
+ 
 
-  const fetchCountries = async () => {
-    const apiCountries = await fetch('https://disease.sh/v3/covid-19/countries')
-    const jsonCountries = await apiCountries.json()
+}, [])
+ 
 
-    setCountries(jsonCountries)
 
-  }
-  console.log(countries, "this is the countries data")
+  // const fetchCountries = async () => {
+  //   const apiCountries = await fetch('https://disease.sh/v3/covid-19/countries')
+  //   const jsonCountries = await apiCountries.json()
+  //   setCountries(jsonCountries)
+   
+  // }
+  // console.log(countries, "this is the countries data")
 
-  useEffect(() => {
-    fetchData()
-    fetchCountries()
-    // fetch('https://api.covid19api.com/summary')
-    // .then(res => {
-    // if(res.ok) {
-    //   return res.json()
-    // }
-    //   throw res
-    // }).then(data => console.log(data, 'data is data') )  
-  }, [])
+  // useEffect(() => {
+  //   fetchData()
+  //   fetchCountries()
+  //   fetch('https://api.covid19api.com/summary')
+  //   .then(res => {
+  //   if(res.ok) {
+  //     return res.json()
+  //   }
+  //     throw res
+  //   }).then(data => console.log(data, 'data is data') )  
+  // }, [])
 
   // const [state, dispatch] = useReducer(reducer, initialState)
 
@@ -119,7 +125,7 @@ function App() {
 
           </div>
 
-          <TopAfectedCountries countries={countries} />
+          <TopAfectedCountries />
 
           <Symptoms />
 
