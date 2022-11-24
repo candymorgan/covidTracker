@@ -49,14 +49,6 @@
   /* margin-top: 20px; */
 }
 
-/* .generalCaseContainer{
-    width: 70%;
-    height: 400px;
-    margin-top: 90px;
-    position: absolute;
-    border: 1px solid blue;
-    display: flex;
-  } */
 .countriesContainer h3 {
   margin-top: 15px;
   margin-left: 15px;
@@ -73,7 +65,7 @@
   grid-template-columns: 1.6fr 1.6fr;
   gap: 20px;
   text-align: center;
-  padding: 0 0 0 20px;
+  /* padding: 0 0 0 10px; */
   /* border: 1px solid red; */
 }
 .boxes{
@@ -105,25 +97,21 @@
   /* border: 2px solid #2B6FF3; */
 }
 
-/* .box {
-  padding: 20px;
-  height: 80px;
-  border-radius: 5px;
-  border: 1px solid #ff1d83;
-} */
-
 .countryLogo2 > img{
   width: 20px;
   height: 15px;
   object-fit: cover;
   /* border: 1px solid red; */
 }
-/* .worldmap{
-  padding-left: 20px;
-  margin-left: 30px;
-  border: 1px solid;
-  margin-bottom: 20px;
-} */
+
+
+.countriesDiv{
+  cursor: pointer;
+}
+
+.caseData h4{
+  margin-top: 5px;
+}
 
 @media only screen and (max-width: 600px) {
   .childContainer2 {
@@ -176,8 +164,9 @@
   }
 
   .boxes {
-      height: 70px;
-      width: 160px;
+      height: 60px;
+      width: 140px;
+      padding-top: 10px;
   }
 
   .worldmap {

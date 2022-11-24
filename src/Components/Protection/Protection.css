@@ -71,11 +71,6 @@
     display: block;
   }
 
-  .images {
-    /* gap: 20px; */
-    /* border: 1px solid red; */
-  }
-
   .rightContent p {
     width: 100%;
     margin-top: 10px;
@@ -83,7 +78,7 @@
 
 
     .leftImage img{
-      width: 300px;
+      width: 250px;
       /* border: 1px solid red; */
     }
   .rightContent h1 {
@@ -97,8 +92,12 @@
   .image3,
   .image4,
   .image5 {
-    height: 141px;
-    width: 124px;
+    height: 120px;
+    width: 110px;
+  }
+
+  .images h5 {
+    margin-top: 5px;
   }
 
 }

@@ -38,9 +38,7 @@ const TopAfectedCountries = () => {
       
     }
 
-  })
-
-  
+  }) 
   
  }
     

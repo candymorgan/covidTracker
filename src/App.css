@@ -71,23 +71,9 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  
-  /* .childContainer1 {
-    height: 200px;
-    width: 60%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    padding: 15px;
-    border-radius: 5px;
-    margin: 0 39px 0 39px;
 
-
-    border: 1px solid orchid;
-  } */
- 
   .container2 {
-    width: 80%;
+    width: 90%;
     margin-top: 40px;
     border-radius: 5px;
     margin: 0 auto;
