@@ -69,14 +69,14 @@ const TopAfectedCountries = () => {
                     
                     countryObj?.map(countries => (
                     <div className="country" key={countries.country}>
-                   <button className='countriesBtn' onClick={() => handleClick(countries.country)}> 
+                   <div className='countriesDiv' onClick={() => handleClick(countries.country)}> 
                      <div className="nameLogo_div2">
                       <div className="countryLogo2">
                       <img src={countries?.countryInfo?.flag} alt={countries?.country} />
                       </div>
                       <div className="countryName2">{countries.country}</div>
                     </div>
-                    </button>
+                    </div>
                     <div className="figures2">{countries.cases}</div>
                   </div>
                   ))
