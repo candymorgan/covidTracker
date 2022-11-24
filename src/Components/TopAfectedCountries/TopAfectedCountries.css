@@ -17,6 +17,7 @@
 }
 .affected {
   margin-left: 600px;
+  width: 100%;
 }
 
 .writeUp {
@@ -94,6 +95,7 @@
   /* border: 1px solid rgb(172, 122, 221); */
 }
 
+
 .nameLogo_div,
 .nameLogo_div2,
 .nameLogo_div3,
@@ -101,6 +103,9 @@
   display: flex;
   align-items: center;
   /* border: 2px solid #2B6FF3; */
+}
+.countriesBtn{
+  border: none;
 }
 
 /* .box {
@@ -188,3 +193,6 @@
     margin-left: 20px;
   }
 }
+
+
+

@@ -6,9 +6,9 @@ import Rectangle34 from '../../Rectangle34.svg'
 
 
 const TopAfectedCountries = () => {
-  const [countryName, setCountryName] = useState("ITALY")
+  const [countryName, setCountryName] = useState("")
   const [countryObj, setCountryObj] = useState([])
-  const [countryCases, setcountryCases] = useState(0)
+  const [countryCases, setcountryCases] = useState()
 
 
  useEffect(() => {
@@ -30,12 +30,21 @@ const TopAfectedCountries = () => {
  
    
  
- const handleClick = () => {
-  setCountryName(countryObj.country)
-  setcountryCases(countryObj.cases)
+ const handleClick = (data) => {
+  countryObj.forEach((countries) => {
+    if (data === countries.country) {
+      setcountryCases(countries)
+      setCountryName(data)
+      
+    }
+
+  })
+
+  
+  
  }
     
-  
+
   return (
 
     <>
@@ -58,17 +67,17 @@ const TopAfectedCountries = () => {
 
                   {
                     
-                    countryObj?.map(country => (
-                    <div className="country" key={country.country}>
-                   <button onClick={handleClick}> 
+                    countryObj?.map(countries => (
+                    <div className="country" key={countries.country}>
+                   <button className='countriesBtn' onClick={() => handleClick(countries.country)}> 
                      <div className="nameLogo_div2">
                       <div className="countryLogo2">
-                      <img src={country?.countryInfo?.flag} alt={country?.country} />
+                      <img src={countries?.countryInfo?.flag} alt={countries?.country} />
                       </div>
-                      <div className="countryName2">{country.country}</div>
+                      <div className="countryName2">{countries.country}</div>
                     </div>
                     </button>
-                    <div className="figures2">{country.cases}</div>
+                    <div className="figures2">{countries.cases}</div>
                   </div>
                   ))
 
@@ -82,22 +91,22 @@ const TopAfectedCountries = () => {
 
                     
                     <div className='boxes'>Total Cases
-                      <h4>{countryCases}</h4>
+                      <h4>{countryCases?.cases}</h4>
                     </div>
                     <div className='boxes'>Active Cases
-                    <h4>{countryCases}</h4>
+                    <h4>{countryCases?.active}</h4>
                     </div>
                     <div className='boxes'>Recovered
-                    <h4>{countryCases}</h4>
+                    <h4>{countryCases?.recovered}</h4>
                     </div>
                     <div className='boxes'>Total Deaths
-                    <h4>{countryCases}</h4>
+                    <h4>{countryCases?.deaths}</h4>
                     </div>
                     <div className='boxes'>New Cases
-                    <h4>{countryCases}</h4>
+                    <h4>{countryCases?.todayCases}</h4>
                     </div>
                     <div className='boxes'>New Deaths
-                    <h4>{countryCases}</h4>
+                    <h4>{countryCases?.todayDeaths}</h4>
                     </div>
                   </div>
 
